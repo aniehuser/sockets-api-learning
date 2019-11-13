@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# Netbeans
+nbproject/**
+
+# unpv13e build specific
+unpv13e/Make.defines
+unpv13e/Makefile
+unpv13e/config.h
+unpv13e/config.log
+unpv13e/config.status
+
+# OS X specific
+.DS_STORE

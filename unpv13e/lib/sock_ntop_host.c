@@ -13,7 +13,7 @@ sock_ntop_host(const struct sockaddr *sa, socklen_t salen)
 	case AF_INET: {
 		struct sockaddr_in	*sin = (struct sockaddr_in *) sa;
 
-		if (inet_ntop(AF_INET, &sin->sin_addr, str, sizeof(str)) == NULL)
+		if (inet_ntop_rc(AF_INET, &sin->sin_addr, str, sizeof(str)) == NULL)
 			return(NULL);
 		return(str);
 	}
@@ -22,7 +22,7 @@ sock_ntop_host(const struct sockaddr *sa, socklen_t salen)
 	case AF_INET6: {
 		struct sockaddr_in6	*sin6 = (struct sockaddr_in6 *) sa;
 
-		if (inet_ntop(AF_INET6, &sin6->sin6_addr, str, sizeof(str)) == NULL)
+		if (inet_ntop_rc(AF_INET6, &sin6->sin6_addr, str, sizeof(str)) == NULL)
 			return(NULL);
 		return(str);
 	}
